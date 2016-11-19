@@ -9,8 +9,8 @@ pass_path=~/Shell/sshp_pass
 host=$1
 
 if [ -z $host ]; then 
-	cat $pass_path | awk  '{print $1}'
-	echo "please input one host which displayed above:"  
+    cat $pass_path | awk  '{print $1}'
+    echo "please input one host which displayed above:"  
     read host
 fi
   
@@ -32,7 +32,7 @@ fi
 
 # default port
 if [ -z $port ]; then
-	$port=22
+    $port=22
 fi  
 
 exec sshpass -p $password ssh -o ConnectTimeout=5 $user@$host -p$port  
