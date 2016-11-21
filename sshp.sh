@@ -32,8 +32,8 @@ fi
 
 # default port
 if [ -z $port ]; then
-    $port=22
-fi  
+    port=22
+fi
 
 exec sshpass -p $password ssh -o ConnectTimeout=5 $user@$host -p$port  
 exit $RC_SUCCESS
