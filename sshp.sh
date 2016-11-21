@@ -4,8 +4,8 @@ RC_ERR_NO_HOST=11
 RC_ERR_NO_PASSWORD=21  
 RC_SUCCESS=0  
   
-pass_path=~/Shell/sshp_pass  
-  
+pass_path=$(dirname $(readlink -f $0))/sshp_pass
+	  
 host=$1
 
 if [ -z $host ]; then 
