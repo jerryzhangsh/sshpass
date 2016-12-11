@@ -8,6 +8,7 @@ System Requirements
 
 2.sshpass
 
+3.brew install coreutils(OSX only)
 
 Install Guide
 
