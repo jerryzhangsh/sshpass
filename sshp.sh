@@ -3,7 +3,12 @@
 RC_ERR_NO_HOST=11  
 RC_ERR_NO_PASSWORD=21  
 RC_SUCCESS=0  
-  
+
+if command -v greadlink >/dev/null 2>&1; then 
+    alias readlink=greadlink
+    shopt -s expand_aliases
+fi
+
 pass_path=$(dirname $(readlink -f $0))/sshp_pass
 	  
 host=$1
